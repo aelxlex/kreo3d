@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kreo3D - Tienda Virtual</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+  <div class="header-container">
+    <div class="logo-container">
+      <img src="assets/images/logo.png" alt="Logo Kreo3D" class="logo">
+      <h1>Kreo3D</h1>
+    </div>
+
+    <!-- Botón hamburguesa -->
+    <button class="hamburguesa" onclick="toggleMenu()">☰</button>
+
+    <!-- Menú de navegación -->
+    <nav id="menu">
+  <ul>
+    <li><a href="#catalogo" onclick="cerrarMenu()">Catálogo</a></li>
+    <li><a href="#personalizar" onclick="cerrarMenu()">Personalizar</a></li>
+    <li><a href="#contacto" onclick="cerrarMenu()">Contacto</a></li>
+    <li><a href="#" onclick="cerrarMenu(); abrirCarrito()">🛒 Carrito (<span id="contador-carrito">0</span>)</a></li>
+  </ul>
+</nav>
+  </div>
+  <p class="lema">"Donde creamos lo que imaginas"</p>
+</header>
+
+  <section id="banner">
+    <video autoplay muted loop playsinline class="video-fondo">
+      <source src="assets/images/video3d.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
+    </video>
+    <div class="contenido-banner">
+      <h2>Convierte tus ideas en objetos reales</h2>
+      <p>Explora nuestros productos o crea el tuyo desde cero</p>
+      <a href="https://wa.me/59173867546?text=Hola%20Kreo3D,%20quiero%20cotizar%20un%20dise%C3%B1o%203D%20personalizado." class="btn-banner">Solicita tu diseño</a>
+    </div>
+  </section>
+
+
+  <section id="catalogo">
+    <h2>Catálogo de productos</h2>
+    <div class="filtros">
+      <button onclick="filtrar('todos')">Todos</button>
+      <button onclick="filtrar('figuras')">Figuras</button>
+      <button onclick="filtrar('llaveros')">Llaveros</button>
+      <button onclick="filtrar('juguetes')">Juguetes</button>
+    </div>
+    <div class="productos" id="productos">
+      <!-- Productos cargados con JS -->
+    </div>
+  </section>
+
+  <section id="personalizar">
+  <h2>Personaliza tu diseño</h2>
+
+  <form id="form-personalizar" enctype="multipart/form-data">
+    <label for="tipo">Tipo de objeto:</label>
+    <select id="tipo" name="tipo">
+      <option value="figura">Figura</option>
+      <option value="llavero">Llavero</option>
+      <option value="busto">Busto</option>
+    </select>
+
+    <label for="altura">Altura aproximada (cm):</label>
+    <input type="number" id="altura" name="altura" required>
+
+    <label for="imagen">Imagen de referencia:</label>
+    <input type="file" id="imagen" name="imagen" accept="image/*" required>
+
+    <label for="comentarios">Comentarios adicionales:</label>
+    <textarea id="comentarios" name="comentarios" placeholder="Ej: estilo low-poly, color blanco, base redonda"></textarea>
+
+    <button type="submit">Enviar solicitud</button>
+  </form>
+
+  <div id="preview-3d" class="preview-3d">
+    <div id="loader" class="loader" style="display:none;">Generando previsualización...</div>
+    <img id="preview-img" alt="Previsualización 3D" style="display:none; max-width: 480px;">
+    <p id="preview-info" class="preview-info"></p>
+  </div>
+</section>
+
+  <section id="contacto">
+  <h2>Contáctanos</h2>
+  <p>¿Tienes dudas, quieres cotizar o hablar con nosotros directamente? Estamos para ayudarte.</p>
+
+  <div class="contacto-grid">
+    <div class="contacto-item">
+      <h3>📱 WhatsApp</h3>
+      <a href="https://wa.me/59173867546" target="_blank">Escríbenos al WhatsApp</a>
+    </div>
+
+    <div class="contacto-item">
+      <h3>📧 Correo</h3>
+      <a href="mailto:kreo3d@gmail.com">kreo3d@gmail.com</a>
+    </div>
+
+    <div class="contacto-item">
+      <h3>📘 Facebook</h3>
+      <a href="https://www.facebook.com/profile.php?id=61584335225803" target="_blank">Síguenos en Facebook</a>
+    </div>
+  </div>
+
+  <form id="form-contacto">
+    <h3>📨 Envíanos un mensaje directo</h3>
+    <input type="text" name="nombre" placeholder="Tu nombre" required>
+    <input type="email" name="email" placeholder="Tu correo" required>
+    <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+    <button type="submit">Enviar mensaje</button>
+  </form>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Kreo3D - Potosí</p>
+    <nav>
+      <a href="#catalogo">Catálogo</a> | 
+      <a href="#personalizar">Personalizar</a> | 
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </footer>
+
+  <!-- Panel lateral del carrito -->
+<div id="carrito-panel" class="carrito-panel">
+  <div class="carrito-header">
+    <h3>🛒 Tu carrito</h3>
+    <button onclick="cerrarCarrito()">✖</button>
+  </div>
+  <div id="carrito-items" class="carrito-items">
+    <!-- Productos añadidos dinámicamente -->
+  </div>
+  <div class="carrito-footer">
+    <p id="carrito-total">Total: Bs 0</p>
+    <button onclick="enviarCarrito()">Comprar Ahora</button>
+  </div>
+</div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
