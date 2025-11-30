@@ -417,6 +417,8 @@ footer nav a {
   display: flex;
   flex-direction: column;
   z-index: 1000;
+   z-index: 9999; /* 👈 más alto que el header */
+  padding-top: 80px;
 }
 
 .carrito-panel.abierto {

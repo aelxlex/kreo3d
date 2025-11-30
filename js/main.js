@@ -3,9 +3,23 @@ const productos = [
   { 
     nombre: "Figura de dragón", 
     categoria: "figuras", 
-    imagen: "img/dragon.jpg", 
+    imagen: "assets/images/figura_dragon.png", 
     precio: "Bs. 80", 
-    descripcion: "Figura decorativa impresa en 3D, ideal para coleccionistas y amantes de la fantasía." 
+    descripcion: "Figura de dragon decorativa impresa en 3D" 
+  },
+  { 
+    nombre: "Figura pantera rosa", 
+    categoria: "figuras", 
+    imagen: "assets/images/figura_pinkpanter.png", 
+    precio: "Bs. 60", 
+    descripcion: "Figura de la pantera rosa" 
+  },
+  { 
+    nombre: "Figura Simpsons", 
+    categoria: "figuras", 
+    imagen: "assets/images/figura_simpsons.png", 
+    precio: "Bs. 100", 
+    descripcion: "Figura de Homero ahorcando a Bart - Simpsons" 
   },
   { 
     nombre: "Llavero alien", 
@@ -18,7 +32,7 @@ const productos = [
     nombre: "Llavero articulado", 
     categoria: "llaveros", 
     imagen: "assets/images/llavero_cocodrilo.png", 
-    precio: "Bs. 25", 
+    precio: "Bs. 60", 
     descripcion: "Diseño de llavero articulado" 
   },
   { 
@@ -32,29 +46,43 @@ const productos = [
     nombre: "Llaveros amon-gus", 
     categoria: "llaveros", 
     imagen: "assets/images/llavero_amongus.png", 
-    precio: "Bs. 25", 
+    precio: "Bs. 30", 
     descripcion: "llavero among-us de diferentes colores" 
   },
    { 
     nombre: "Llaveros pareja", 
     categoria: "llaveros", 
     imagen: "assets/images/llavero_parejas.png", 
-    precio: "Bs. 25", 
+    precio: "Bs. 50", 
     descripcion: "llaveros para parejas" 
   },
    { 
     nombre: "Llavero capibara articulado", 
     categoria: "llaveros", 
     imagen: "assets/images/llavero_capibara.png", 
-    precio: "Bs. 25", 
+    precio: "Bs. 40", 
     descripcion: "llavero de capibara articulado" 
   },
   { 
-    nombre: "Robot articulado", 
-    categoria: "juguetes", 
-    imagen: "img/robot.jpg", 
-    precio: "Bs. 120", 
-    descripcion: "Juguete articulado educativo, pensado para proyectos escolares y entusiastas de la robótica." 
+    nombre: " Sistema solar", 
+    categoria: "otros", 
+    imagen: "assets/images/sistemasolar.png", 
+    precio: "Bs. 40", 
+    descripcion: "Sistema solar 3d" 
+  },
+  { 
+    nombre: "Porta lapiceros", 
+    categoria: "otros", 
+    imagen: "assets/images/portalapicespatricio.png", 
+    precio: "Bs. 60", 
+    descripcion: "Porta lapiceros - Patricio" 
+  },
+  { 
+    nombre: "Soporte celular", 
+    categoria: "otros", 
+    imagen: "assets/images/soportecelular.png", 
+    precio: "Bs. 80", 
+    descripcion: "Soporte celular - Robot" 
   }
 ];
 
