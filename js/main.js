@@ -1,4 +1,3 @@
-// Lista de productos con descripción y precio
 const productos = [
   { 
     nombre: "Figura de dragón", 
@@ -86,7 +85,6 @@ const productos = [
   }
 ];
 
-// Función para filtrar productos por categoría
 function filtrar(categoria) {
   const contenedor = document.getElementById("productos");
   contenedor.innerHTML = "";
@@ -111,16 +109,13 @@ function filtrar(categoria) {
 }
 
 
-// Carrito global
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-// Actualizar carrito en localStorage
 function actualizarCarrito() {
   localStorage.setItem("carrito", JSON.stringify(carrito));
   mostrarContadorCarrito();
 }
 
-// Mostrar contador en el header (ejemplo)
 function mostrarContadorCarrito() {
   const contador = document.getElementById("contador-carrito");
   if (contador) {
@@ -129,7 +124,6 @@ function mostrarContadorCarrito() {
   }
 }
 
-// Añadir producto al carrito
 function añadirAlCarrito(nombreProducto) {
   const producto = productos.find(p => p.nombre === nombreProducto);
   if (!producto) return;
@@ -145,7 +139,6 @@ function añadirAlCarrito(nombreProducto) {
   alert(`"${nombreProducto}" fue añadido al carrito.`);
 }
 
-// Comprar ahora (solo ese producto)
 function comprarAhora(nombreProducto) {
   const producto = productos.find(p => p.nombre === nombreProducto);
   if (!producto) return;
@@ -154,7 +147,6 @@ function comprarAhora(nombreProducto) {
   window.open(`https://wa.me/59173867546?text=${mensaje}`, "_blank");
 }
 
-// Ver carrito completo
 function verCarrito() {
   if (carrito.length === 0) {
     alert("Tu carrito está vacío.");
@@ -166,18 +158,15 @@ function verCarrito() {
   window.open(`https://wa.me/59173867546?text=${mensaje}`, "_blank");
 }
 
-// Inicializar al cargar
 window.addEventListener("DOMContentLoaded", () => {
   filtrar("todos");
   mostrarContadorCarrito();
 });
 
-// Mostrar todos los productos al cargar la página
 window.addEventListener("DOMContentLoaded", () => {
   filtrar("todos");
 });
 
-// Evento para el formulario de personalización
 document.getElementById("form-personalizar").addEventListener("submit", function(e) {
   e.preventDefault();
   const mensaje = document.getElementById("mensaje-form");
@@ -193,7 +182,6 @@ const previewInfo = document.getElementById("preview-info");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  // Validación simple del archivo
   const fileInput = document.getElementById("imagen");
   const file = fileInput.files[0];
   if (!file) return alert("Sube una imagen.");

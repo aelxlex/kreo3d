@@ -1,6 +1,6 @@
 :root {
-  --color-primario: #0a2c5f;   /* azul oscuro */
-  --color-secundario: #1e90ff; /* celeste/azul brillante */
+  --color-primario: #0a2c5f;  
+  --color-secundario: #1e90ff;
   --color-gris: #333;
   --color-fondo: #f4f4f4;
 }
@@ -29,7 +29,7 @@ header {
 
 .header-container {
   display: flex;
-  justify-content: space-between; /* logo a un lado, menú al otro */
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -46,11 +46,11 @@ header {
 
 @media (max-width: 768px) {
   .logo-container img.logo {
-    height: 60px;   /* 👈 más pequeño en móvil */
+    height: 60px; 
   }
 
   .logo-container h1 {
-    font-size: 1.2em; /* 👈 texto más pequeño en móvil */
+    font-size: 1.2em;
   }
 }
 
@@ -60,7 +60,6 @@ header h1 {
   font-size: 1.5em;
 }
 
-/* Botón hamburguesa oculto en escritorio */
 .hamburguesa {
   display: none;
   font-size: 1.8em;
@@ -69,14 +68,12 @@ header h1 {
   cursor: pointer;
 }
 
-/* Menú normal en escritorio */
 nav ul {
   display: flex;
   gap: 1em;
   list-style: none;
 }
 
-/* Responsive: en pantallas pequeñas */
 @media (max-width: 768px) {
   .hamburguesa {
     display: block;
@@ -90,7 +87,7 @@ nav ul {
     background: #fff;
     width: 200px;
     border: 1px solid #ddd;
-    display: none; /* oculto por defecto */
+    display: none;
     flex-direction: column;
      z-index: 9999;
   }
@@ -107,7 +104,7 @@ nav ul {
   }
 
   nav.abierto {
-    display: flex; /* se muestra cuando se abre */
+    display: flex;
   }
 }
 
@@ -175,7 +172,7 @@ section {
   position: relative;
   z-index: 1;
   padding: 2em;
-  background: rgba(0, 0, 0, 0.4); /* oscurece para mejor lectura */
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
 
@@ -415,14 +412,12 @@ footer nav a {
   box-shadow: -2px 0 8px rgba(0,0,0,0.2);
   transition: right 0.3s ease;
   display: flex;
-  flex-direction: column;
-  z-index: 1000;
-   z-index: 9999; /* 👈 más alto que el header */
-  padding-top: 80px;
+  flex-direction: column; 
+  z-index: 10001;
 }
 
 .carrito-panel.abierto {
-  right: 0; /* se muestra */
+  right: 0;
 }
 
 .carrito-header {
@@ -435,7 +430,7 @@ footer nav a {
 
 .carrito-items {
   flex: 1;
-  overflow-y: auto;
+  overflow-y: auto; 
   padding: 1em;
 }
 
@@ -448,6 +443,7 @@ footer nav a {
 .carrito-footer {
   padding: 1em;
   border-top: 1px solid #ddd;
+  background: #f9f9f9;
 }
 
 .carrito-footer button {
