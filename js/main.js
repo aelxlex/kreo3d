@@ -270,7 +270,7 @@ function enviarCarrito() {
 
   const resumen = carrito.map(p => `- ${p.nombre} x${p.cantidad} (${p.precio})`).join("\n");
   const total = carrito.reduce((acc, p) => acc + parseFloat(p.precio.replace("Bs. ", "")) * p.cantidad, 0);
-  const mensaje = encodeURIComponent(`Hola Kreo3D, quiero cotizar estos productos:\n${resumen}\nTotal: Bs ${total}`);
+  const mensaje = encodeURIComponent(`Hola Kreo3D, quiero comprar estos productos:\n${resumen}\nTotal: Bs ${total}`);
   window.open(`https://wa.me/59173867546?text=${mensaje}`, "_blank");
 }
 
